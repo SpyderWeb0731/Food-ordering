@@ -1,0 +1,1899 @@
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  
+  
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+
+
+/* Sections Headings */
+section h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin: 2rem 0 1rem;
+  color: #2c3e50;
+}
+
+/* Menu Grid - Home Kitchen */
+.menu-section {
+  padding: 1rem 2rem;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+/* Popular Items */
+.popular-items {
+  padding: 1rem 2rem;
+
+}
+
+.carousel-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  overflow: hidden;
+}
+
+.carousel-btn {
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+  padding: 0.5rem 0.8rem;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.popular-scroll-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+  flex: 1;
+  overflow-x: auto;
+}
+
+/* Card Styles */
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 320px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.card img {
+  height: 180px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0.8rem;
+}
+
+.card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.card .price {
+  font-weight: bold;
+  color: #27ae60;
+  margin-bottom: 0.5rem;
+}
+
+.card .rating i {
+  color: #f1c40f;
+}
+
+.add-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.add-container button {
+  border: none;
+  padding: 0.4rem 0.6rem;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #2ecc71;
+  color: white;
+  font-size: 0.9rem;
+}
+
+.add-container .rate-item {
+  background-color: #f39c12;
+}
+
+/* About / Service Info Section */
+.service-info {
+  text-align: center;
+  padding: 2rem;
+  background-color: #e8f5e9;
+}
+
+.service-info p {
+  max-width: 600px;
+  margin: 1rem auto;
+}
+
+.video-thumbnail video {
+  margin-top: 1rem;
+  width: 55%;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+/* Contact & Feedback */
+.contact,
+.feedback {
+  padding: 2rem;
+  background-color: #fff;
+}
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+input,
+textarea,
+select {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: vertical;
+}
+
+button[type="submit"],
+.btn {
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+  padding: 0.7rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Footer */
+.footer {
+  background-color: #2ecc71;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+.footer nav {
+  margin-top: 0.5rem;
+}
+
+.footer nav a {
+  margin: 0 0.5rem;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+.popular-items {
+  padding: 2rem 1rem;
+  background-color: #f9f9f9;
+}
+
+.carousel-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+  margin: auto;
+  padding: 1rem 0;
+}
+
+.popular-scroll-wrapper {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  padding: 1rem 0;
+  width: 100%;
+}
+
+.popular-scroll-wrapper::-webkit-scrollbar {
+  display: none; /* hide scrollbar */
+}
+
+.popular-scroll-wrapper .card {
+  flex: 0 0 calc(33.333% - 1rem); /* 3 items per view */
+  scroll-snap-align: start;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.carousel-btn {
+  background-color: #ff5722;
+  border: none;
+  color: white;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 50%;
+  margin: 0 0.5rem;
+  z-index: 2;
+}
+
+.carousel-btn:hover {
+  background-color: #e64a19;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: rgb(39, 159, 63);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.nav-icons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.nav-icons i {
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #333;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+  background: white;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #aaa;
+}
+
+.close:hover {
+  color: #333;
+}
+
+#request-form input,
+#request-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#request-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+#request-form button:hover {
+  background-color: #27ae60;
+}
+.video-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #2ecc71;
+  color: white;
+  border-radius: 50%;
+  padding: 1rem;
+  font-size: 2rem;
+  display: none;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.play-icon:hover {
+  background-color: #27ae60;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color:#1AC073;
+  box-shadow: none; /* remove shadow */
+  border: none;      /* ensure no border */
+}
+
+
+.nav {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.nav ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-icons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.nav-icons i {
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: white; /* ← set icon color to white */
+}
+
+.nav-icons button {
+  background: none;
+  border: none;
+  color: white; /* ← also set button color */
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.search-bar {
+  width: 398px;
+  height: 50px;
+  border-radius: 10px;
+  display: flex;
+  gap: 0; /* removes the space between input and button */
+}
+.search-bar button {
+  padding: 0.5rem 1rem;
+  border: none;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 1.2%;
+  background-color: orange;  /* orange background */
+  color: white;              /* white text for contrast */
+  font-weight: bold;
+  border-radius: 0 5px 5px 0; /* rounded only on right side */
+  cursor: pointer;
+}
+.search-bar input {
+  padding: 0.5rem;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: -1.2%;
+  flex: 1;
+  border-radius: 5px 0 0 5px; /* rounded only on left side */
+  border: none;
+}
+.hero-text p {
+  font-size: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 items per row */
+  gap: 1rem;
+}
+.menu-section h2 {
+  text-align: left;
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 24px;
+  letter-spacing: 1,2%;
+  color: #000000;
+  padding-bottom: 30px;
+
+}
+.popular-items h2 {
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 20px;
+  letter-spacing: -1.2%;
+  color: #000000;
+}
+.carousel-btn {
+  background-color: #1AC073; /* Green background */
+  color: white; /* White icon */
+  width: 61.5px;
+  height: 61.5px;
+  border: none;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 50%;
+  margin: 0 0.5rem;
+  z-index: 2;
+}
+
+.carousel-btn:hover {
+  background-color: #17a663; /* Darker green on hover */
+}
+#popular-request-btn {
+  font-size: 1.2re;
+  width: 210px;
+  height: 48px;
+  border-radius: 10px;
+  padding-left: 615px;
+  padding-top: 1900px;
+  padding: 0.8rem 1.5rem; /* Increase button size */
+  background-color: #1AC073;
+  border-radius: 8px;
+}
+.play-icon {
+  width: 80px;
+  height: 90px;
+  padding: 1.2rem; /* Increase the padding for better click area */
+}
+.service-info {
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(to bottom, #FAFAFA 50%, #C7EACC 50%);
+  color: #333; /* Optional: override text color if needed for contrast */
+}
+.video-thumbnail{
+  padding-bottom: 100px;
+
+}
+.service-heading {
+  font-size:40px;
+  letter-spacing: 0.2px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 57px;
+  margin-bottom: 1.5rem;
+  color:#252B42;
+}
+
+.service-heading span {
+  display: block;
+  font-size:40px;
+  line-height: 57px;
+  font-weight: 600;
+  color: #252B42; /* Matches the green theme */
+  margin-top: 0.5rem;
+}
+/* Footer Section */
+.footer {
+  background-color: #1AC073;
+  color: white;
+  padding: 1.5rem 2rem;
+  position: relative;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-logo h3 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: white;
+}
+
+.footer-nav ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.footer-nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.footer-icons a {
+  margin-left: 1rem;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.footer-line {
+  height: 1px;
+  background-color: white;
+  width: 90%;
+  margin: 1.5rem auto 0;
+}
+/* Image Card Hover Effect */
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 320px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card img {
+  height: 180px;
+  object-fit: cover;
+  width: 100%;
+  border-bottom: 1px solid #ddd;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.card:hover img {
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+/* Navigation Link Hover Effect */
+.nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background-color: #ffffff;
+  transition: width 0.3s ease;
+}
+
+.nav ul li a:hover {
+  color: #f9f9f9; /* Slight color change */
+}
+
+.nav ul li a:hover::after {
+  width: 100%; /* Underline effect */
+}
+.video-wrapper video {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-wrapper:hover video {
+  transform: scale(1.02); /* Slight zoom */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Elevate shadow */
+}
+/* Hover effect for Search and Cart Icons */
+#search-icon:hover, #cart-icon:hover {
+  color: #a3e4d7; /* Light green shade */
+  transform: scale(1.1); /* Slight zoom */
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+/* Hover effect for Search Button */
+.search-bar button {
+  padding: 0.5rem 1rem;
+  border: none;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 1.2%;
+  background-color: orange;  /* orange background */
+  color: white;              /* white text for contrast */
+  font-weight: bold;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.search-bar button:hover {
+  background-color: #ff7f00; /* Darker orange on hover */
+  transform: scale(1.05);    /* Slight zoom */
+}
+/* Hover Effect for Footer Links */
+.footer-nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.footer-nav ul li a:hover {
+  color: #a3e4d7; /* Light green on hover */
+}
+
+/* Hover Effect for Footer Icons */
+.footer-icons a {
+  margin-left: 1rem;
+  color: white;
+  font-size: 1.5rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-icons a:hover {
+  color: #a3e4d7; /* Light green on hover */
+  transform: scale(1.1); /* Slight zoom */
+}
+/* Hover effect for Search Bar Input */
+.search-bar input::placeholder {
+  color: #888; /* Default placeholder color */
+  transition: color 0.3s ease;
+}
+
+.search-bar input:hover::placeholder {
+  color: #555; /* Darker shade on hover */
+}
+
+/* Hover effect for Search Button */
+.search-bar button {
+  padding: 0.5rem 1rem;
+  border: none;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 1.2%;
+  background-color: orange;
+  color: white;
+  font-weight: bold;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.search-bar button:hover {
+  background-color: #ff7f00;
+  transform: scale(1.05);
+}
+/* Hover Effect for "Request a Dish" Button */
+#popular-request-btn {
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#popular-request-btn:hover {
+  background-color: #17a663; /* Slightly darker green */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+/* Contact Section */
+
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  max-width: 1200px;
+  width: 100%;
+  background-color: white;
+  
+  
+  
+}
+
+.contact-form-wrapper {
+  
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.contact-form-wrapper h2 {
+  margin-left: 12px;
+  font-size: 24px;
+  margin-bottom: 0.5rem;
+  line-height: 24px;
+  letter-spacing: -1.2%;
+  text-align: left;
+  font-weight: 500;
+}
+
+.contact-subtext {
+  margin-left: 15px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -1.2%;
+  color: #555;
+  margin-bottom: 1.5rem;
+  margin-top: -25px;
+  text-align: left;
+}
+
+.contact-inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-left: -170px;
+  width: 550px;
+  height: 50px;
+}
+
+.contact-inputs input {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  background-color: #FFFFFF;
+  margin-left: 160px;
+}
+
+textarea {
+  width: 550px;
+  margin-left: -10px;
+  padding: 0.8rem;
+  font-size: 1rem;
+  background-color: #FFFFFF;
+  min-height: 120px;
+  resize: vertical;
+}
+
+button[type="submit"] {
+  padding: 0.8rem 2rem;
+  background-color: #1AC073;
+  width: 210px;
+  height: 50px;
+  margin-left: -10px;
+  color: white;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 1rem;
+}
+
+button[type="submit"]:hover {
+  background-color: #17a663;
+}
+
+.contact-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.contact-image img {
+ width: 500px;
+ height: 400px;
+  object-fit: cover;
+}
+/* Placeholder Pop-up Effect */
+.contact-inputs input::placeholder,
+textarea::placeholder {
+  transition: transform 0.2s ease, color 0.2s ease;
+  color: #aaa;
+}
+
+.contact-inputs input:hover::placeholder,
+textarea:hover::placeholder {
+  transform: translateY(-3px);
+  color: #555;
+}
+/* Footer Links Pop-up Effect */
+.footer-nav ul li a {
+  position: relative;
+  display: inline-block;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.footer-nav ul li a:hover {
+  transform: translateY(-3px); /* Slight pop-up effect */
+  color: #a3e4d7; /* Light green on hover */
+}
+/* Submit Button Hover Effect */
+button[type="submit"] {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button[type="submit"]::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: #17a663;
+  z-index: -1;
+  transition: left 0.3s ease;
+}
+
+button[type="submit"]:hover::before {
+  left: 0;
+}
+
+button[type="submit"]:hover {
+  color: white;
+  transform: translateY(-2px);
+}
+/* Footer Logo Pop-up and Glow Effect */
+.footer-logo h3 {
+  position: relative;
+  display: inline-block;
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+  color: white;
+}
+
+.footer-logo h3:hover {
+  transform: translateY(-3px);
+  text-shadow: 0 0 5px #a3e4d7, 0 0 10px #1AC073; /* Glow effect */
+}
+
+/* Footer Icons Pop-up and Color Change */
+.footer-icons a {
+  margin-left: 1rem;
+  color: white;
+  font-size: 1.5rem;
+  transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.footer-icons a:hover {
+  transform: translateY(-3px);
+  color: #a3e4d7; /* Light green color on hover */
+  text-shadow: 0 0 5px #a3e4d7, 0 0 10px #1AC073; /* Glow effect */
+}
+/* Request a Dish Button Hover Effect */
+#popular-request-btn {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#popular-request-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: #17a663;
+  z-index: -1;
+  transition: left 0.3s ease;
+}
+
+#popular-request-btn:hover::before {
+  left: 0;
+}
+
+#popular-request-btn:hover {
+  color: white;
+  transform: translateY(-2px);
+}
+/* JTGeets Header Glow and Pulse Effect */
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  position: relative;
+  display: inline-block;
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+  color: white;
+}
+
+.logo:hover {
+  transform: translateY(-3px);
+  text-shadow: 0 0 5px #a3e4d7, 0 0 10px #1AC073;
+  animation: pulseEffect 0.8s infinite alternate;
+}
+
+@keyframes pulseEffect {
+  0% {
+    text-shadow: 0 0 5px #a3e4d7, 0 0 10px #1AC073;
+  }
+  100% {
+    text-shadow: 0 0 8px #a3e4d7, 0 0 15px #1AC073;
+  }
+}
+/* Hover Effects for Hero Section Text */
+.hero-text h1 {
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.hero-text h1:hover {
+  color: #a3e4d7; /* Light green color on hover */
+  transform: translateY(-3px); /* Slight lift effect */
+  text-shadow: 0 0 5px #a3e4d7, 0 0 10px #1AC073; /* Glow effect */
+}
+
+.hero-text p {
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.hero-text p:hover {
+  color: #a3e4d7; /* Light green color on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+/* Hover Effect for Section Headings */
+.menu-section h2 {
+  position: relative;
+  display: inline-block;
+  font-size: 2rem;
+  color: #2c3e50;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.menu-section h2:hover,
+.popular-items h2:hover {
+  color: #1AC073; /* Green shade */
+  transform: translateY(-2px);
+}
+
+/* Sliding Underline Animation */
+.menu-section h2::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  background-color: #1AC073;
+  left: 0;
+  bottom: -5px;
+  transition: width 0.3s ease;
+}
+
+
+.menu-section h2:hover::after,
+.popular-items h2:hover::after {
+  width: 100%;
+}
+/* Hover Effect for Contact Section Text */
+.contact-form-wrapper h2,
+.contact-subtext {
+  position: relative;
+  display: inline-block;
+  transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+/* Main Heading Hover Effect */
+.contact-form-wrapper h2:hover {
+  color: #1AC073; /* Green on hover */
+  transform: translateY(-2px); /* Slight lift */
+  text-shadow: 0 0 5px #1AC073, 0 0 10px #1AC073; /* Subtle glow */
+}
+
+/* Subtext Hover Effect */
+.contact-subtext:hover {
+  color: #17a663; /* Slightly lighter green */
+  transform: translateY(-1px); /* Slight lift */
+}
+.contact-image img {
+  width: 300px; /* Adjust the width as needed */
+  height: 300px; /* Adjust the height as needed */
+  object-fit: cover; /* Ensures the image remains well-proportioned */
+  border-radius: 100%; /* Keeps it circular */
+}
+.hero-image img {
+  width: 500px; /* Adjust the width as needed */
+  height: 300px; /* Adjust the height as needed */
+  object-fit: cover; /* Ensures the image remains well-proportioned */
+  border-radius: 100%; /* Keeps it circular */
+  margin-right: 160px;
+}
+/* Cart Modal Styling */
+#cartModal .modal-content {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  position: relative;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+#cartModal h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #1AC073;
+}
+
+#cartList {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+#cartList li {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #eee;
+  font-size: 1rem;
+  color: #333;
+}
+
+#submitOrder {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: #1AC073;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#submitOrder:hover {
+  background-color: #17a663;
+}
+
+/* Optional fade animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+.im{
+    height: 300px;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("main.webp");
+    background-size: cover;
+}
+.navbar{
+    display: flex;
+    height: 60px;
+    background-color:#222f3d;
+
+}
+.logo{
+    height: 80px;
+    width: 80px;
+    background-image: url("IMG-20240517-WA0005_1_-removebg-preview.png");
+    background-size: cover;
+    margin-left: 200px;
+}
+.name{
+    font-family:mon;
+    font-size: 25px;
+    margin-top: 20px;
+    color:white;
+}
+.name:hover{
+    color: orangered;
+}
+.icon1{
+    margin-top: 24px;
+    margin-left: 10px;
+    color: white;
+    height: 30px;
+    
+}
+.loc:hover{
+    color: orangered;
+}
+.l1{
+    color: white;
+    font-size: 40px;
+    margin-left: 10px;
+    margin-top: -2px;
+    font-weight:lighter;
+}
+.w1{
+    color: white;
+    margin-top: 27px;
+    margin-left: 10px;
+    font-size: 12px;
+}
+.w1:hover{
+    color: orangered;
+}
+.icon2{
+    color: white;
+    margin-left: 5px;
+    margin-top: 25px;
+}
+.icon2:hover{
+    color: orangered;
+}
+.search{
+    display: flex;
+    
+    height: 25px;
+    width: 220px;
+    margin-top: 20px;
+    margin-left: 30px;
+    border: none;
+}
+.input{
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border:none;
+    width: 90%;
+    height: 100%;
+
+}
+
+.loc{
+    color: white;
+}
+.l2{
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+
+
+    display: flex;
+    align-items: center;
+    
+    color: black;
+    background-color: white;
+    width: 30px;
+    height: 27.5px;
+
+}
+.l2:hover{
+    color: orangered;
+}
+.l3{
+    color: white;
+    margin-left:50px;
+    margin-top: 24px;
+}
+.l3:hover{
+    color: orangered;
+}
+.ind{
+    margin-left: 15px;
+    margin-top: 23px;
+    color: white;
+}
+.ind:hover{
+    color: orangered;
+}
+.l{
+    margin-left: 30px;
+    font-size: 30px;
+    margin-top: 13px;
+}
+.icon3{
+    
+    margin-left: 40px;
+    margin-top: 23px;
+}
+.profile{
+    color: white;
+}
+.profile:hover{
+    color: orangered;
+}
+.log{
+    color: white;
+    margin-left: 20px;
+    margin-top: 23px;
+    text-decoration: none;
+}
+.log:hover{
+    color: orangered;
+}
+.sing{
+    color: white;
+    margin-left: 20px;
+    margin-top: 23px;
+    text-decoration: none;
+
+}
+.sing:hover{
+    color: orangered;
+}
+.t1{
+    color: white;
+    padding-top: 90px;
+    padding-left: 150px;
+    font-size: 40px;
+    font-family: moon;
+}
+.t2{
+    color: white;
+    padding-left: 210px;
+    padding-top: 5px;
+    font-size: 50px;
+    font-family: moon;
+}
+.t3{
+    color: white;
+    padding-left: 320px;
+    padding-top: 5px;
+    font-size: 20px;
+    font-family: moon;
+}
+.on{
+    
+    font-family: mono;
+    font-size: 30px;
+}
+.what{
+    background-color:white;
+    height: 50px;
+    margin-top: 80px;
+    padding-left: 80px;
+    padding-top: 10px;
+}
+.mind{
+    display: flex;
+    justify-content:space-around;
+    height: 140px;
+   
+    
+    margin-top:100px;
+}
+long{
+    height: 160px;
+    display: flex;
+    justify-content: space-around;
+}
+.i1{
+    padding-top: px;
+    height:140px;
+    width: 12%;
+    border-radius: 50%;
+}
+.l11{
+    background-image: url("hakka-noodles-recipe.jpg");
+    background-size: cover;
+}
+.l22{
+    background-image: url("easy-chinese-chilli-chicken-dry-4.jpg");
+    background-size: cover;
+}
+.l13{
+    background-image: url("gulab.jpg");
+    background-size: cover;
+}
+.l4{
+    background-image: url("pan.jpg");
+    background-size: cover;
+}
+.l5{
+    background-image: url("chicken.jpeg");
+    background-size: cover;
+}
+.l6{
+    background-image: url("briyani.jpg");
+    background-size: cover;
+}
+.me{
+    display: flex;
+    justify-content:space-around;
+    margin: 15px;
+}
+
+.chinies{
+    margin-left: 40px;
+}
+.Chillies{
+    margin-left: 11px;
+}
+.sweet{
+    margin-left: 17px;
+}
+.veg{
+    margin-left: 2px;
+}
+.chicken{
+    margin-right: 7px;
+}
+.im:hover{
+    height: 300px;
+    background-image:url("main.webp");
+    background-size: cover;
+
+}
+.im:active{
+    background-image: url("final.jpg");
+}
+.recent{
+    font-family: monos;
+    font-size: 30px;
+    margin-left: 80px;
+    margin-top: 50px;
+}
+.added{
+    margin-top: 70px;
+    display: flex;
+    justify-content:space-evenly;
+    height: 350px;
+    
+
+
+}
+.r11{
+    height: 350px;
+    width:25%;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7),rgba(255, 255, 255, 0.7)),url("briyani.jpg");
+    background-size:320px;
+    background-repeat: no-repeat;
+    
+  
+    
+}
+.d1{
+    color: white;
+    margin-top: 240px;
+}
+
+.r11:hover{
+    background-image: url("briyani.jpg");
+    .d1{
+        color:black
+    }
+}
+.a1{
+    text-decoration: none;
+}
+.m1{
+    text-decoration: none;
+    color: black;
+}
+.best{
+    font-family: monos;
+    font-size: 30px;
+    margin-left: 80px;
+    margin-top: 50px;
+}
+.selling{
+    display: flex;
+    justify-content: space-evenly;
+    height: 350px;
+    margin-top: 70px;
+}
+.s1{
+    margin-left: 50px;
+    height: 350px;
+    width:20%;
+    background-image: url("briyani.jpg");
+    background-size:290px;
+    background-repeat: no-repeat;
+
+}
+.s11{
+    margin-top: 230px;
+}
+.slide{
+    margin-top: 100px;
+    border: 2px solid black;
+    height: 20px;
+    padding-top: 3px;
+    padding-left: 8px;
+    padding-right: 8px;
+    
+}
+.s1:hover{
+    
+        background-image: url("briyani2.jpg");
+        background-size: 290px;
+        background-repeat: no-repeat;
+        
+    .s11{
+        color: blue;
+    }
+}
+.a11{
+    text-decoration: none;
+    color: black;
+}
+.i1:hover{
+    
+        border: 5px solid orangered;
+    
+}
+.s111{
+    background-image: url("Paneer-butter-masala-recipe-3-500x375.jpg");
+    background-size: 260px;
+    
+}
+.s111:hover{
+    background-image: url("paneer-butter-masala\ 2.jpg");
+    background-size: 375px;
+}
+.s112{
+    background-image: url("chicken\ chilli.jpeg");
+    background-size: 290px;
+}
+.s112:hover{
+    background-image: url("chicken\ chilli2.jpg");
+}
+.s113{
+    background-image: url("paratha.jpg");
+}
+.s113:hover{
+    background-image: url("paratha\ 2.jpg");
+}
+.tag{
+    font-family: monosp;
+    margin-top: 80px;
+    margin-left: 400px;
+    font-size: 40px;
+}
+.tag1{
+    font-family: monosp;
+    margin-top: 5px;
+    margin-left: 210px;
+    font-size: 50px;
+
+}
+.tag2{
+    font-family: monosp;
+    margin-top: 5px;
+    margin-left: 520px;
+    font-size: 25px;
+}
+.tag1:hover{
+    color: orangered;
+}
+.tag2:hover{
+    color: orangered;
+}
+.tag:hover{
+    color: orangered;
+}
+.menu{
+    font-family: monospa;
+    font-size: 60px;
+    margin-left: 500px;
+    margin-top: 50px; text-decoration: underline;
+    text-decoration-color: orangered;
+}
+.line{
+    margin-top: 60px;
+    height: 2px;
+    background-color: black;
+}
+.ch{
+    font-family:monospac;
+    font-size: 40px;
+    margin-left: 80px;
+    margin-top: 90px;
+
+}
+.chi{
+    display: flex;
+    justify-content: space-evenly;
+    height: 300px;
+    margin-top: 50px;
+}
+.chi1{
+    
+    width: 20%;
+    height: 300px;
+    background-image: url("gobi\ chilli.jpg");
+
+    background-size: cover;
+    background-size: 260px;
+    background-repeat: no-repeat;
+
+}
+.pr1{
+    font-family: monospa;
+    font-weight: bolder;
+    font-size: 18px;
+    margin-top: 210px;
+    margin-left:px;
+}
+.chi11{
+    background-image: url('soyabean\ chilli.webp');
+    background-size: 300px;
+}
+.chi1:hover{
+    color: orangered;
+}
+.chi12{
+    background-image: url('channan\ chilli.jpg');
+    background-size: 268px;
+}
+.chi13{
+    background-image: url("panner\ chilli.webp");
+    background-size: 270px;
+}
+.dal1{
+    background-image: url("thin\ yello\ dal.webp");
+    background-size: 330px;
+}
+.dal2{
+    background-image:url("thick\ yello\ dal.webp") ;
+}
+.dal3{
+    background-image:url("chana\ dal\ fry.jpg") ;
+    background-size: 350px;
+}
+.dal4{
+    background-image:url("dal\ tadka.jpg") ;
+    background-size: 350px;
+}
+.dal5{
+    background-image: url("mix\ tadka.webp");
+    background-size: 290px;
+}
+.veg1{
+    background-image: url("allu\ fry.jpg");
+    background-size: 340px;
+}
+.veg2{
+    background-image: url("bhindhi\ fry.jpg");
+    background-size: 345px;
+}
+.veg3{
+    background-image: url("kerala\ fry.jpg");
+    background-size: 390px;
+}
+.veg4{
+    background-image: url("allu\ dam.jpg");
+    background-size: 290px;
+}
+.veg5{
+    background-image: url("allu\ matar.jpg");
+}
+.veg6{
+    background-image: url("allu\ gobhi.webp");
+    background-size: 320px;
+}
+.veg7{
+    background-image: url("allu\ bagan.jpg");
+    background-size: 265px;
+}
+.veg8{
+    background-image: url("allu\ bagan\ palak.webp");
+    background-size: 300px;
+}
+.veg9{
+    background-image: url("ma.webp");
+    background-size:340px ;
+}
+.veg10{
+    background-image: url("palak\ panner.jpg");
+}
+.veg11{
+    background-image: url("pannen\ masala.jpg");
+    background-size: 295px;
+}
+.veg12{
+    background-image: url("Paneer-butter-masala-recipe-3-500x375.jpg");
+}
+.n{
+    background-image: none;
+}
+.non1{
+    background-image: url("plain\ omelete.jpg");
+    background-size: 345px;
+}
+.non2{
+    background-image: url("masal\ egg\ omelete.jpg");
+}
+.non3{
+    background-image: url("egg\ cury.jpeg");
+    background-size: 260px;
+}
+.non4{
+    background-image: url("masala\ egg.jpg");
+    background-size: 260px;
+}
+.non5{
+    background-image: url("fish\ curry.jpg");
+    background-size: 290px;
+}
+.non6{
+    background-image: url("fish\ masala.jpg");
+    background-size: 290px;
+}
+.non7{
+    background-image: url("chicken\ cury.jpg");
+    background-size: 290px;
+}
+.non8{
+    background-image: url("chicken\ masala.jpg");
+    background-size: 290px;
+}
+.non9{
+    background-image: url("chicken\ do\ piyaja.jpg");
+    background-size: 340px;
+}
+.non10{
+    background-image: url("butter\ chicken.webp");
+    background-size: 340px;
+}
+.non11{
+    background-image: url("briyani2.jpg");
+    background-size: 290px;
+}
+.non12{
+    background-image: url("chilli\ chicken.jpg");
+    background-size: 295px;
+}
+.pa1{
+    background-image: url("puri.jpeg");
+    background-size: 285px;
+}
+.pa2{
+    background-image: url("tawa\ roti.webp");
+    background-size:255px;
+}
+.pa3{
+    background-image: url("plain\ paratha.jpg");
+    background-size:290px ;
+}
+.pa4{
+    background-image: url("allu\ paratha.webp");
+}
+.pa5{
+    background-image: url("Sattu_Ka_Paratha.jpg");
+   
+}
+.pa6{
+    background-image: url("Chana-Dal-Paratha.jpg");
+    background-size:275px ;
+}
+.pa7{
+    background-image: url("panner\ parath.webp");
+    background-size: 275px;
+}
+.ri1{
+    background-image:url("steam.webp") ;
+    background-size:290px ;
+}
+.ri2{
+    background-image:url("basmati.jpg") ;
+    background-size: 260px;
+}
+.ri3{
+    background-image:url("zeera.jpg") ;
+    background-size: 295px ;
+}
+.ri4{
+    background-image:url("fried-rice-using-veggies.jpg") ;
+    background-size: 295px;
+}
+.ri5{
+    background-image:url("ss.jpg") ;
+    background-size: 290px;
+}
+.ri6{
+    background-image:url("special.jpg") ;
+    background-size:290px ;
+}
+.sw1{
+    background-image:url("semiya-payasam-shewai-sewai-khir-seviyan-kheer-is-indian-sweet-made-with-vermicelli-milk-ghee-sugar-jaggery-raisins-nuts-1-1024x683.webp") ;
+    background-size:290px ;
+}
+.sw2{
+    background-image:url("kheer.webp") ;
+    background-size:290px ;
+}
+.sw3{
+    background-image:url("gulab\ jamun.webp") ;
+    background-size:264px ;
+}
+.sw4{
+    background-image:url("rash\ gu.webp") ;
+    background-size:305px ;
+}
+.ad1{
+    background-image: url("roasted.jpg");
+    background-size: 285px;
+}
+.ad2{
+    background-image: url("fried.jpg");
+    background-size: 310px;
+}
+.ad3{
+    background-image: url("disco.webp");
+    background-size: 275px;
+}
+.ad4{
+    background-image: url("on.webp");
+    background-size: 255px;
+}
+.ad5{
+    background-image: url("bu.png");
+    background-size: 275px;
+}
+.ad6{
+    background-image: url("sa.webp");
+    background-size: 290px;
+}
+.sc1{
+    background-image: url("chowmin.webp");
+    background-size: 255px;
+}
+.sc2{
+    background-image: url("egg\ chowmin.jpg");
+    background-size:290px ;
+}
+.sc3{
+    background-image: url("chicken\ chowmin.jpg");
+    background-size: 290px;
+}
+.sc4{
+    background-image: url("wh.jpg");
+    background-size: 255px;
+}
+.sc5{
+    background-image: url("red.jpg");
+    background-size:280px ;
+}
+
+
+/* footer */
+.footer1{
+    margin-top: 40px;
+    background-color: #37475a;
+    color: #FFFFFF;
+    height: 49px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
+ul a{
+    display: block;
+    font-size: 13px;
+    margin-top: 10px;
+    color: #dddddd;
+}
+
+
+
+.footer2{
+    justify-content: space-evenly;
+    padding-top: 40px;
+    padding-left: 40px;
+    display: flex;
+    background-color: #222f3d;
+    height: 300px;
+    color: white;
+}
+.m{
+    font-size: 30px;
+    text-decoration: underline;
+}
+.footer3{
+    display: flex;
+    align-items: center;
+    background-color: black;
+    height: 80px;
+    border-top: 0.1px solid #dddddd;
+}
+.logo1{
+    background-image: url("IMG-20240517-WA0005_1_-removebg-preview.png");
+    text-align: center;
+    height: 130px;
+    width: 120px;
+    background-size:cover;
+    margin-top:1px;
+    margin-left: 300px;
+    border: 2px solid transparent;
+
+}
+
+.logo2{
+    padding: 8px;
+    color: white;
+    margin-left: 80px;
+    border: 0.5px solid white;
+    border-radius: 4px;
+}
+.logo3{
+    padding: 8px;
+    color: white;
+    border: 0.5px solid white;
+    margin-left: 10px;
+    border-radius: 4px;
+}
+.logo3{
+    padding: 8px;
+    color: white;
+    border: 0.5px solid white;
+    margin-left: 10px;
+    border-radius: 4px;
+}
+.footer4{
+    background-color: #222f3d;
+    color: white;
+    text-align: center;
+    height: 70px;
+    padding-top: 20px;
+    font-size: 12px;
+}
+
+.copyright{
+    padding-top: 10px;
+}
+.back{
+    color: white;
+    text-decoration: none;
+}
+.back:hover{
+    color: orangered;
+}
+.p1{
+    margin-top: 30px;
+    font-size: 20px;
+    text-decoration: none;
+    
+}
+.p2{
+    margin-top: 10px;
+    font-size: 20px;
+    text-decoration: none;
+
+}
+.p1:hover{
+    color: blue;
+}
+.p2:hover{
+    color: blue;
+}
+
+.m:hover{
+    color: orangered;
+}
+
+
